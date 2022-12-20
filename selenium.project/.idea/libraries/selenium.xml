@@ -65,6 +65,7 @@
       <root url="jar://$USER_HOME$/Downloads/selenium/selenium-safari-driver-4.7.2.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/selenium/selenium-support-4.7.2.jar!/" />
       <root url="file://$USER_HOME$/Downloads/selenium" />
+      <root url="jar://$USER_HOME$/Downloads/maven/selenium-java-4.7.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
