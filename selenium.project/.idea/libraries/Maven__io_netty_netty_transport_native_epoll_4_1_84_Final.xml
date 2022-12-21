@@ -8,6 +8,22 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.84.Final/netty-transport-native-epoll-4.1.84.Final-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-api-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-chrome-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-chromium-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-devtools-v85-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-devtools-v106-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-devtools-v107-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-devtools-v108-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-edge-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-firefox-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-http-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-ie-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-json-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-manager-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-remote-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-safari-driver-4.7.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/selenium/selenium-support-4.7.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
