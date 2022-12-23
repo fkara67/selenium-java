@@ -3,7 +3,6 @@ package SeleniumPractices;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class TestOnWebsite {
@@ -26,8 +25,6 @@ public class TestOnWebsite {
         WebDriver driver = new ChromeDriver();
         LoginTest(driver);
         ListOfAllOrdersTest(driver);
-
-
     }
     public static void LoginTest(WebDriver driver) throws InterruptedException {
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/" +
@@ -54,7 +51,6 @@ public class TestOnWebsite {
         // 1- check one order and delete it
         LogIn(driver);
         driver.findElement(By.id("ctl00_MainContent_orderGrid_ctl02_OrderSelector")).click();
-
         driver.findElement(By.cssSelector("input#ctl00_MainContent_btnDelete")).click();
         if (driver.findElement(By.id("ctl00_MainContent_orderGrid_ctl09_OrderSelector")).
                 isEnabled()) {
