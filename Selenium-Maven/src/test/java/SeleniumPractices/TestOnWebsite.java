@@ -38,7 +38,7 @@ public class TestOnWebsite {
         loginTest(driver);
         listOfAllOrdersTest(driver);
         ordersMenuTest(driver);
-        
+
 
     }
     public static void loginTest(WebDriver driver) throws InterruptedException {
