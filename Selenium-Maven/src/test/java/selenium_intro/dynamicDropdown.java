@@ -13,8 +13,10 @@ public class dynamicDropdown {
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXTaction")).click();
 
         driver.findElement(By.xpath("//a[@value='BLR']")).click();
+        // //div[@id='ctl00_mainContent_ddl_originStation1_CTNR'] //a[@value='BLR']
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
+        // //div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']
         driver.quit();
     }
 }
