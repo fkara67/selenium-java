@@ -1,4 +1,4 @@
-package Week_02;
+package Week_02.LoginPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,6 @@ public class WrongLoginCombinations {
         System.setProperty("webdriver.chrome.driver","C:/Users/fkara/Downloads/chromedriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
-        driver.get("https://www.saucedemo.com/");
         String[][] loginCombinations = {{"standard","secret_sauce"},{"frkn","ali"},{"locked_out_user","secret_sauce"}};
 
         for (String[] loginCombination : loginCombinations) {
