@@ -1,4 +1,4 @@
-package selenium_intro;
+package selenium_intro.DropdownsAndMore;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +17,8 @@ public class dynamicDropdown {
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
         // //div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']
+
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
         driver.quit();
     }
 }

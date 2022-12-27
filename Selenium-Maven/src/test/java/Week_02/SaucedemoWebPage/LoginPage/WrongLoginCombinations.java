@@ -1,4 +1,4 @@
-package Week_02.LoginPage;
+package Week_02.SaucedemoWebPage.LoginPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

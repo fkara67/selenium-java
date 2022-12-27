@@ -1,4 +1,4 @@
-package selenium_intro;
+package selenium_intro.DropdownsAndMore;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +19,17 @@ public class UpdatedDropdown {
 
         System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("Style"));
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("Style"));
 
+        if (driver.findElement(By.id("Div1")).getAttribute("Style").contains("1")) {
+            System.out.println("It's enabled");
+            Assert.assertTrue(true);
+        }
+        else {
+            Assert.fail();
+        }
 
         driver.findElement(By.id("divpaxinfo")).click();
         Thread.sleep(2000);
@@ -30,5 +40,6 @@ public class UpdatedDropdown {
         Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "6 Adult");
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
         driver.quit();
+
     }
 }

@@ -1,4 +1,4 @@
-package selenium_intro;
+package selenium_intro.DropdownsAndMore;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
