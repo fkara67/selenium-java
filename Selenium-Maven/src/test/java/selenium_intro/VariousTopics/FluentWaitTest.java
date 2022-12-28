@@ -1,4 +1,4 @@
-package selenium_intro.DropdownsAndMore;
+package selenium_intro.VariousTopics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
