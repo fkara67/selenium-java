@@ -20,8 +20,6 @@ public class ProblemUserTestallTheThingsTShirtRedAddToCartButtonTest {
 
         driver.findElement(By.id("add-to-cart-test.allthethings()-t-shirt-(red)")).click();
         driver.findElement(By.cssSelector("a[class='shopping_cart_link']")).click();
-        Assert.assertTrue(driver.findElement(By.id("item_0_title_link")).isEnabled());
-
-        driver.quit();
+        Assert.assertTrue(driver.findElement(By.id("item_0_title_link")).isDisplayed());
     }
 }

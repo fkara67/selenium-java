@@ -9,8 +9,6 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.ArrayList;
-
-
 import static java.util.Collections.sort;
 
 
@@ -18,7 +16,7 @@ public class StandardUserZToAButtonTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:/Users/fkara/Downloads/chromedriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4000));
         driver.get("https://www.saucedemo.com/");
 
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
@@ -26,10 +24,10 @@ public class StandardUserZToAButtonTest {
         driver.findElement(By.id("login-button")).click();
 
         ArrayList<String> products = new ArrayList<>();
-        for (int i = 1; i <= 6; i++) {
+        int size = driver.findElements(By.cssSelector(".inventory_item_name")).size();
+        for (int i = 1; i < size; i++) {
             //get unordered products names from page
-            String name = driver.findElement(By.xpath
-                  ("/html/body/div/div/div/div[2]/div/div/div/div[" + i + "]/div[2]/div[1]/a")).getText();
+            String name = driver.findElements(By.cssSelector(".inventory_item_name")).get(i).getText();
 
             //assign these products in ArrayList
             products.add(name);
@@ -48,12 +46,12 @@ public class StandardUserZToAButtonTest {
         Select dropdown = new Select(driver.findElement(By.cssSelector("select[class='product_sort_container']")));
         dropdown.selectByIndex(1);
 
+
         //check them, sorted or not(Z to A)
-        for (int i = 1; i < products.size(); i++) {
-            String actualName = driver.findElement(By.xpath
-                   ("/html/body/div/div/div/div[2]/div/div/div/div[" + i + "]/div[2]/div[1]/a")).getText();
-            Assert.assertEquals(actualName,products.get(i - 1));
+        for (int i = 1; i < size; i++) {
+            String actualName = driver.findElements(By.cssSelector(".inventory_item_name")).get(i - 1).getText();
+            Assert.assertEquals(actualName, products.get(i - 1));
         }
-        driver.quit();
+        //driver.quit();
     }
 }
