@@ -17,27 +17,24 @@ public class Calendar {
         JavascriptExecutor js = driver;
         js.executeScript("window.scrollBy(0,900)");
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
-        // August 18
         driver.findElement(By.id("form-field-travel_comp_date")).click();
 
-        while (!driver.findElement(By.cssSelector("span[title='Scroll to increment']")).getText().contains("July")) {
+        while (!driver.findElement(By.cssSelector("span[class='cur-month']")).getText().contains("April")) {
             driver.findElement(By.cssSelector("[class='flatpickr-next-month']")).click();
         }
 
-        driver.findElement(By.xpath("//div[10]/div[2]/div/div[2]/div/span[20]")).click();
+        //driver.findElement(By.xpath("//span[20]")).click();
+        Thread.sleep(2000);
+        List<WebElement> days = driver.findElements(By.cssSelector("span[class='flatpickr-day ']"));
 
-        List<WebElement> days = driver.findElements(By.className("flatpickr-day."));
-        /*
         for (WebElement day : days) {
             String text = day.getText();
-            if (text.equals("18")) {
+            if (text.equals("19")) {
                 day.click();
                 break;
             }
         }
-
-         */
     }
 }
