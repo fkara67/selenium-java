@@ -52,7 +52,7 @@ public class LiveDemo {
     @Test
     public void GetProductPrice() {
         List<WebElement> elementList = driver.findElements(By.xpath("//div/div/a/div"));
-        List<String> price = elementList.stream().filter(s -> s.getText().contains("Sauce Labs Backpack")).
+        List<String> price = elementList.stream().filter(s -> s.getText().contains("Sauce Labs Onesie")).
                 map(s -> getPriceProduct(s)).collect(Collectors.toList());
         price.forEach(a -> System.out.println(a));
     }
@@ -61,7 +61,7 @@ public class LiveDemo {
         //  //div/div/a/div
         //  //div/div/a/div/parent::a/parent::div/parent::div/div[2]/div/text()[2]
         String priceValue = s.findElement(By.xpath
-                ("parent::a/parent::div/parent::div/div[2]/div/text()[2]")).getText();
+                ("parent::a/parent::div/parent::div/div[2]/div")).getText().split("$")[0];
         return priceValue;
     }
 
