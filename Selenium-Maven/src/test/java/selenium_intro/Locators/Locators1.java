@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Locators {
+public class Locators1 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:/Users/fkara/Downloads/chromedriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
