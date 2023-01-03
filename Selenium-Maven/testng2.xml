@@ -3,12 +3,14 @@
 <suite name="All Test Suite">
     <test verbose="2" name="C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven">
         <classes>
+
             <class name="TestNGIntro.LiveDemo">
                 <methods>
                     <include name="sortAToZButtonTest"/>
                     <include name="GetProductPrice"/>
                 </methods>
             </class>
+
             <class name="TestNGIntro.SimpleTest">
                 <methods>
                     <include name="regular"/>
@@ -17,6 +19,7 @@
                     <include name="streamCollect"/>
                 </methods>
             </class>
+
         </classes>
     </test>
 </suite>

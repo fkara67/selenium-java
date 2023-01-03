@@ -17,6 +17,7 @@ public class LiveDemo {
 
     @BeforeSuite
     public void setUpSuit() {
+        System.out.println("----------------------BeforeSuit-----------------------");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -24,6 +25,7 @@ public class LiveDemo {
 
     @BeforeTest
     public void setUpTest() {
+        System.out.println("----------------------BeforeTest-----------------------");
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -69,5 +71,6 @@ public class LiveDemo {
     public void afterTest() {
         // Perform cleanup tasks or generate test reports here
         driver.quit();
+        System.out.println("----------------------AfterSuit-----------------------");
     }
 }
