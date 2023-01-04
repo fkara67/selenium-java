@@ -1,22 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" name="C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven">
-        <classes>
-            <class name="TestNGIntro.LiveDemo">
-                <methods>
-                    <include name="sortAToZButtonTest"/>
-                    <include name="GetProductPrice"/>
-                </methods>
-            </class>
-            <class name="TestNGIntro.SimpleTest">
-                <methods>
-                    <include name="regular"/>
-                    <include name="streamFilter"/>
-                    <include name="streamMap"/>
-                    <include name="streamCollect"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven"><classes><class name="TestNGIntro.LiveDemo"><methods><include name="sortAToZButtonTest"/><include name="GetProductPrice"/></methods></class><class name="TestNGIntro.LiveDemo2"><methods><include name="sortProductsWithNameTest"/><include name="getProductPrice"/><include name="filterBoxTest"/></methods></class><class name="TestNGIntro.SimpleTest"><methods><include name="regular"/><include name="streamFilter"/><include name="streamMap"/><include name="streamCollect"/></methods></class></classes></test></suite>
