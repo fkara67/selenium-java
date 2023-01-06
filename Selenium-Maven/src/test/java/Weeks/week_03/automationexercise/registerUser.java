@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -116,5 +117,10 @@ public class registerUser {
         String deleteMessage = driver.findElement(By.xpath("//b")).getText();
         Assert.assertEquals(deleteMessage, "ACCOUNT DELETED!");
         driver.findElement(By.cssSelector("[data-qa='continue-button']")).click();
+    }
+
+    @AfterSuite
+    public void afterTest() {
+        driver.quit();
     }
 }
