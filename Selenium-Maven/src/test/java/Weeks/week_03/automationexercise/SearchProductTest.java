@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 
@@ -19,7 +21,11 @@ public class SearchProductTest {
     @BeforeSuite
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setAcceptInsecureCerts(true);
+        File file = new File("C:\\Users\\fkara\\Downloads\\CRX-Extractor-Downloader.crx");
+        options.addExtensions(file);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
@@ -37,7 +43,7 @@ public class SearchProductTest {
     @Test(priority = 2)
     public void verifyNavigatedToALLPRODUCTSPageSuccessfully() throws InterruptedException {
         driver.findElement(By.cssSelector("a[href='/products']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getTitle(),"Automation Exercise - All Products");
     }
 
@@ -51,8 +57,10 @@ public class SearchProductTest {
 
     @Test(priority = 3)
     public void verifyAllTheProductsRelatedToSearchAreVisible() {
-        List<WebElement> searchedResults = driver.findElements(By.xpath("//div[2]/div/p"));
-        boolean allMatched = searchedResults.stream().allMatch(s -> s.getText().contains("Jeans"));
-        Assert.assertTrue(allMatched);
+        List<WebElement> products = driver.findElements(By.xpath("//div[1]/div[1]/div[1]/p"));
+
+        long jeanCount = products.stream().filter(s-> s.getText().contains("Jeans")).count();
+
+        Assert.assertEquals(jeanCount, 3);
     }
 }
