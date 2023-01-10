@@ -9,7 +9,7 @@
           <include name="setUpSuit"/>
           <include name="setUpTest"/>
         </methods>
-      </class> <!-- Weeks.week_03.automationexercise.registerUser -->
+      </class> <!-- Weeks.week_03.org.registerUser -->
     </classes>
   </test> <!-- C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
