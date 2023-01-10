@@ -9,7 +9,6 @@ public class Pages {
     private SignupPage signupPage;
     private ProductsPage productsPage;
     private AccountCreatedPage accountCreatedPage;
-    private AccountDeletedPage accountDeletedPage;
 
 
     public Pages() {
@@ -18,15 +17,10 @@ public class Pages {
         this.signupPage = new SignupPage();
         this.productsPage = new ProductsPage();
         this.accountCreatedPage = new AccountCreatedPage();
-        this.accountDeletedPage = new AccountDeletedPage();
     }
 
     public HomePage getHomePage() {
         return homePage;
-    }
-
-    public AccountDeletedPage getAccountDeletedPage() {
-        return accountDeletedPage;
     }
 
     public LoginPage getLoginPage() {

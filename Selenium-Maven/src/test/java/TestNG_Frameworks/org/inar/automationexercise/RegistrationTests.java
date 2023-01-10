@@ -29,7 +29,7 @@ public class RegistrationTests extends BaseTest {
         BrowserUtils.wait(1);
     }
 
-    @Test(priority = 0)
+    @Test
     public void TestCase_1_Register_User() {
         String userName = "Ceren";
         // Verify that home page is visible successfully
@@ -85,8 +85,13 @@ public class RegistrationTests extends BaseTest {
         softAssert.assertEquals(actualAccountCreatedMessage,"ACCOUNT CREATED!",
                 "Test Case 1 - Verify that 'ACCOUNT CREATED!' is visible");
 
+
         // Click 'Continue' button
         pages.getAccountCreatedPage().clickContinueButton();
+
+
+        // block ads
+        BrowserUtils.navigateBackAndForwardToDismissAds();
 
         // Verify that 'Logged in as username' is visible
         String actualLoggedInAsUsername = pages.getHomePage().getLoggedInAsUserName_Text();

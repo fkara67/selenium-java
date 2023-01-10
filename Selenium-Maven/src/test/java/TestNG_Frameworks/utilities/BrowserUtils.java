@@ -37,6 +37,13 @@ public class BrowserUtils {
     }
 
     /**
+     * Performs click action on an element
+     */
+    public static void click(WebElement element) {
+        new Actions(Driver.getDriver()).moveToElement(element).click();
+    }
+
+    /**
      * Performs thread sleep for the desired seconds
      */
     public static void wait(int secs) {
@@ -105,5 +112,11 @@ public class BrowserUtils {
     public static WebElement waitForClickability(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void navigateBackAndForwardToDismissAds(){
+        Driver.getDriver().navigate().back();
+        Driver.getDriver().navigate().forward();
+
     }
 }
