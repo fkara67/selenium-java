@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class RegistrationTests extends BaseTest {
+public class RegistrationTests extends BaseTest  {
 
     // We should use soft assertion because in this test case we have multiple cases to test
     SoftAssert softAssert = new SoftAssert();
@@ -85,10 +85,8 @@ public class RegistrationTests extends BaseTest {
         softAssert.assertEquals(actualAccountCreatedMessage,"ACCOUNT CREATED!",
                 "Test Case 1 - Verify that 'ACCOUNT CREATED!' is visible");
 
-
         // Click 'Continue' button
         pages.getAccountCreatedPage().clickContinueButton();
-
 
         // block ads
         BrowserUtils.navigateBackAndForwardToDismissAds();
