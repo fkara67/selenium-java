@@ -4,20 +4,23 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import utilities.BrowserUtils;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
+import java.time.Duration;
 
-public class RegistrationSteps extends BaseTest {
+
+public class RegistrationSteps extends BaseStep {
     SoftAssert softAssert = new SoftAssert();
 
     @Given("the user is on the home page")
     public void the_user_is_on_the_home_page() {
-        WebDriver driver = Driver.getDriver();
-        driver.get("https://automationexercise.com/");
-        BrowserUtils.wait(3);
+        String URL = ConfigurationReader.getProperty("url");
+        Driver.getDriver().get(URL);
+        System.out.println("Open ::" + URL);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @When("the user clicks on Signup Login button")
@@ -80,7 +83,11 @@ public class RegistrationSteps extends BaseTest {
         pages.getSignupPage().setCity(city);
         pages.getSignupPage().setZipcode(zipcode);
         pages.getSignupPage().setMobileNumber(mobileNumber);
+        /*pages.getSignupPage().the_user_fills_all_detailsPFNLNCmpnyCntrySCtyZCMN(String password,
+                String firstName, String lastName, String company, String address,
+                String country, String state, String city, String zipcode, String mobileNumber);*/
     }
+
 
     @When("clicks Create Account button")
     public void clicksCreateAccountButton() {

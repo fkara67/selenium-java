@@ -157,4 +157,20 @@ public class SignupPage extends BasePage {
         return emailAlreadyExistMessage.getText();
     }
 
+    public void the_user_fills_all_detailsPFNLNCmpnyCntrySCtyZCMN(String password, String firstName, String lastName,
+                                                                  String company, String address, String country,
+                                                                  String state, String city, String zipcode,
+                                                                  String mobileNumber) {
+        setPassword(password);
+        setDateOfBirt("23", "April", "1999");
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCompany(company);
+        setAddress(address);
+        setCountry(country);
+        setState(state);
+        setCity(city);
+        setZipcode(zipcode);
+        setMobileNumber(mobileNumber);
+    }
 }
