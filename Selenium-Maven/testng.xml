@@ -34,7 +34,8 @@
                     <include name="verifyACCOUNTCREATEDIsVisible"/>
                     <include name="clickContinueButton"/>
                     <include name="verifyLoggedInAsUsernameIsVisible"/>
-                    <include name="clickDeleteAccountButton"/><include name="verifyACCOUNTDELETEDIsVisibleAndClickContinueButton"/>
+                    <include name="clickDeleteAccountButton"/>
+                    <include name="verifyACCOUNTDELETEDIsVisibleAndClickContinueButton"/>
                 </methods>
             </class>
         </classes>
