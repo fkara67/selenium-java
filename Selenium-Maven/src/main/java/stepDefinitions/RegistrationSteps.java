@@ -9,18 +9,15 @@ import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
-import java.time.Duration;
-
-
 public class RegistrationSteps extends BaseStep {
     SoftAssert softAssert = new SoftAssert();
 
     @Given("the user is on the home page")
-    public void the_user_is_on_the_home_page() {
+    public void theUser_is_on_home_page() {
         String URL = ConfigurationReader.getProperty("url");
         Driver.getDriver().get(URL);
         System.out.println("Open ::" + URL);
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        BrowserUtils.implicitlyWait(5);
     }
 
     @When("the user clicks on Signup Login button")
@@ -127,6 +124,4 @@ public class RegistrationSteps extends BaseStep {
                 "Test Case 1 - Verify that 'ACCOUNT DELETED!' is visible");
         pages.getAccountCreatedPage().clickContinueButton();
     }
-
-
 }

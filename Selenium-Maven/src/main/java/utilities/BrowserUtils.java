@@ -124,4 +124,8 @@ public class BrowserUtils {
         System.out.println("My Message: " + actual.getText());
     }
 
+    public static void implicitlyWait(int sec) {
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+    }
+
 }
