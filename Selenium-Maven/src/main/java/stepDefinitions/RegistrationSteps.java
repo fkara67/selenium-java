@@ -51,7 +51,7 @@ public class RegistrationSteps extends BaseStep {
         softAssert.assertEquals(actualTitle, expectedTitle,
                 "Test Case 1 - Verify that 'ENTER ACCOUNT INFORMATION' is visible");
     }
-// select gender"<gender>" and select all checkboxes
+    // select gender"<gender>" and select all checkboxes
     @Given("select gender{string} and select all checkboxes")
     public void select_gender_select_all_checkboxes(String gender) {
         if ((gender.equals("Mr."))) {
@@ -70,8 +70,8 @@ public class RegistrationSteps extends BaseStep {
 
     @Given("the user fills all details p{string} fN{string} lN{string} cmpny{string} a{string} cntry{string} s{string} cty{string} zC{string} mN{string}")
     public void the_user_fills_all_detailsPFNLNCmpnyCntrySCtyZCMN(String password,
-                                           String firstName, String lastName, String company, String address,
-                                           String country, String state, String city, String zipcode, String mobileNumber) {
+                                                                  String firstName, String lastName, String company, String address,
+                                                                  String country, String state, String city, String zipcode, String mobileNumber) {
         pages.getSignupPage().setPassword(password);
         pages.getSignupPage().setDateOfBirt("23", "April", "1999");
         pages.getSignupPage().setFirstName(firstName);

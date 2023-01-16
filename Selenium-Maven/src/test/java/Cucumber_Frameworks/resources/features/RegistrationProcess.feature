@@ -19,7 +19,7 @@ Feature: Register User
     When clicks Signup button
     Then Verify that 'ENTER ACCOUNT INFORMATION' is visible
     Given select gender"<gender>" and select all checkboxes
-    Given the user fills all details p"<password>" fN"<firstName>" lN"<lastName>" cmpny"<company>" a"<address>" cntry"<country>" s"<state>" cty"<city>" zC"<zipcode>" mN"<mobileNumber>"
+    And the user fills all details p"<password>" fN"<firstName>" lN"<lastName>" cmpny"<company>" a"<address>" cntry"<country>" s"<state>" cty"<city>" zC"<zipcode>" mN"<mobileNumber>"
     When clicks Create Account button
     Then verifies that 'ACCOUNT CREATED!' is visible
     When the user clicks Continue button

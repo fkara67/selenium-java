@@ -3,8 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
@@ -16,9 +14,6 @@ public class Hooks {
         System.out.println("Environment :: " + ConfigurationReader.getProperty("url"));
         System.out.println("Test scenario :: " + scenario.getName());
         Driver.getDriver().manage().window().maximize();
-
-
-
 
     }
 

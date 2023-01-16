@@ -1,6 +1,7 @@
 package TestNG_Frameworks.pages;
 
 import TestNG_Frameworks.utilities.BrowserUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

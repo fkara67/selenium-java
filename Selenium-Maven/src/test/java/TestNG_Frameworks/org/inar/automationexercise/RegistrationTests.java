@@ -1,6 +1,7 @@
 package TestNG_Frameworks.org.inar.automationexercise;
 
 
+
 import TestNG_Frameworks.utilities.BrowserUtils;
 import TestNG_Frameworks.utilities.ConfigurationReader;
 import TestNG_Frameworks.utilities.Driver;
@@ -10,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class RegistrationTests extends BaseTest  {
+public class RegistrationTests extends BaseTest   {
 
     // We should use soft assertion because in this test case we have multiple cases to test
     SoftAssert softAssert = new SoftAssert();
@@ -31,6 +32,7 @@ public class RegistrationTests extends BaseTest  {
 
     @Test
     public void TestCase_1_Register_User() {
+
         String userName = "Ceren";
         // Verify that home page is visible successfully
         softAssert.assertEquals(Driver.getDriver().getTitle(), "Automation Exercise",
