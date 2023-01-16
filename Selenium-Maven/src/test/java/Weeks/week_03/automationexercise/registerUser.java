@@ -6,15 +6,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.io.File;
 import java.time.Duration;
 import java.util.List;
 
@@ -24,10 +21,7 @@ public class registerUser {
     @BeforeSuite
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        File file = new File("C:\\Users\\fkara\\Downloads\\CRX-Extractor-Downloader.crx");
-        options.addExtensions(file);
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
@@ -57,7 +51,7 @@ public class registerUser {
     @Test(priority = 4)
     public void enterNameEmailAndClickSignUp() {
         driver.findElement(By.name("name")).sendKeys("Fatih Kara");
-        driver.findElement(By.xpath("//div[3]/div/form/input[3]")).sendKeys("fkara67@gmail.com");
+        driver.findElement(By.xpath("//div[3]/div/form/input[3]")).sendKeys("fatihkara67@gmail.com");
         driver.findElement(By.xpath("//div[3]/div/form/button")).click();
     }
 
@@ -104,6 +98,8 @@ public class registerUser {
     @Test(priority = 8)
     public void clickContinueButton() {
         driver.findElement(By.cssSelector("[class='btn btn-primary']")).click();
+        driver.navigate().back();
+        driver.navigate().forward();
     }
 
     @Test(priority = 9)

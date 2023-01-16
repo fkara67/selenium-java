@@ -2,7 +2,6 @@ package TestNG_Frameworks.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -124,5 +123,9 @@ public class BrowserUtils {
         waitForVisibility(actual,2);
         softAssert.assertEquals(actual.getText(),expected, message);
         System.out.println("My Message: " + actual.getText());
+    }
+
+    public static void implicitlyWait(int sec) {
+        utilities.Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
 }

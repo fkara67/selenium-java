@@ -23,11 +23,11 @@ public class RegistrationTests extends BaseTest   {
         String browser = ConfigurationReader.getProperty("browser");
         String environment = ConfigurationReader.getProperty("environment");
         //Launch browser and Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get(URL);
+        driver.get(URL);
         System.out.println("   :::::::::: Test Information ::::::::::\n\tURL :" + URL + "\n\tBrowser :"
                 + browser + "\n\tEnvironment :" + environment);
         System.out.println("   ::::::::::::::::::::::::::::::::::::::");
-        BrowserUtils.wait(1);
+        BrowserUtils.implicitlyWait(5);
     }
 
     @Test
@@ -141,6 +141,6 @@ public class RegistrationTests extends BaseTest   {
     @AfterSuite
     public void afterTest() {
         // Perform cleanup tasks or generate test reports here
-        Driver.getDriver().quit();
+        driver.quit();
     }
 }

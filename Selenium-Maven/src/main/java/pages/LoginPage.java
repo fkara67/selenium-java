@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
-
+    //div[3]/div/h2
     @FindBy(xpath = "//div[3]/div/h2")
     private WebElement newUserSignupMessageWebElement;
 
@@ -25,6 +25,10 @@ public class LoginPage extends BasePage {
 
     @FindBy(css = "[data-qa='login-button']")
     private WebElement loginButton;
+
+    @FindBy(xpath = "//div/div/div[1]/div/h2")
+    private WebElement loginToYourAccountMessageElement;
+
 
 
     public String getNewUserSignupMessage() {
@@ -54,4 +58,9 @@ public class LoginPage extends BasePage {
     public void clickLoginButton() {
         loginButton.click();
     }
+
+    public String getLoginToYourAccountMessage() {
+        return loginToYourAccountMessageElement.getText();
+    }
+
 }

@@ -1,21 +1,19 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.asserts.SoftAssert;
 import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
-public class RegistrationSteps extends BaseStep {
+public class RegistrationProcessSteps extends BaseStep {
     SoftAssert softAssert = new SoftAssert();
 
     @Given("the user is on the home page")
     public void theUser_is_on_home_page() {
         String URL = ConfigurationReader.getProperty("url");
-        Driver.getDriver().get(URL);
+        driver.get(URL);
         System.out.println("Open ::" + URL);
         BrowserUtils.implicitlyWait(5);
     }
@@ -51,9 +49,9 @@ public class RegistrationSteps extends BaseStep {
     // select gender"<gender>" and select all checkboxes
     @Given("select gender{string} and select all checkboxes")
     public void select_gender_select_all_checkboxes(String gender) {
-        if ((gender.equals("Mr."))) {
+        if ((gender.equals("Man"))) {
             pages.getSignupPage().selectTitleMen();
-        } else {
+        } else if (gender.equals("Woman")){
             pages.getSignupPage().selectTitleWomen();
         }
         pages.getSignupPage().selectTitleWomen();
@@ -63,7 +61,6 @@ public class RegistrationSteps extends BaseStep {
         pages.getSignupPage().selectReceiveSpecialOffers_Checkbox();
     }
 
-// password"<password>" "<firstName>" "<lastName>" "<company> "<address>" "<country>" "<state>" "<city>" "<zipcode>" "<mobileNumber>"
 
     @Given("the user fills all details p{string} fN{string} lN{string} cmpny{string} a{string} cntry{string} s{string} cty{string} zC{string} mN{string}")
     public void the_user_fills_all_detailsPFNLNCmpnyCntrySCtyZCMN(String password,

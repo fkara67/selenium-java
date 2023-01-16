@@ -9,8 +9,10 @@ Feature: Register User
   - The user must have a non-existing email to register
   - User will get a generic error message following register attempt with already existing email
 
- Scenario Outline: Register with non-existing email
-  This scenario tests that a user is able to successfully register when they enter valid credentials.
+
+
+  Scenario Outline: Register with non-existing email
+  This scenario tests that users is able to successfully register when they enter valid credentials.
 
     Given the user is on the home page
     When the user clicks on Signup Login button
@@ -26,10 +28,12 @@ Feature: Register User
     Then verifies that Logged in as "<name>" is visible
     When the user clicks Delete Account button
     Then verifies that 'ACCOUNT DELETED!' is visible and click Continue button
-   Examples:
-     | name | email        |password| firstName | lastName | company | address | country | state | city  | zipcode | mobileNumber |gender|
-     |Fatih |kara@gmail.com|123456  | Fatih     | Kara     | inar    |cukur 67 | India   | Tefen | cukur | 67670   |61764116450   |Mr.|
-     |Ceren |crn@gmail.com |3579246 |Ceren      |Karaca    | inar    |gokcebey | Canada  |Vncover| boston| 67675   |05418656213   |Mrs.|
+
+    Examples:
+      | name  | email          | password | firstName | lastName | company | address  | country | state   | city   | zipcode | mobileNumber | gender |
+      | Fatih | kara@gmail.com | 123456   | Fatih     | Kara     | inar    | cukur 67 | India   | Tefen   | cukur  | 67670   | 61764116450  | Man    |
+      | Ceren | crn@gmail.com  | 3579246  | Ceren     | Karaca   | inar    | gokcebey | Canada  | Vncover | boston | 67675   | 05418656213  | Woman  |
+
 
 
 
