@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage {
 
     @FindBy(xpath = "//div[3]/div/h2")
-    private WebElement newUserSignupMessageWebElement;
+    private WebElement signupTitle;
 
     @FindBy(xpath = "//input[@data-qa='signup-name']")
     private WebElement signupNewUserNameBox;
@@ -17,6 +17,9 @@ public class LoginPage extends BasePage {
     @FindBy(css = "[data-qa='signup-button']")
     public WebElement signupButton;
 
+    @FindBy(xpath = "//div/div/div[1]/div/h2")
+    private WebElement LoginTitle;
+
     @FindBy(css = "[data-qa='login-email']")
     private WebElement loginEmailAddressBox;
 
@@ -24,11 +27,14 @@ public class LoginPage extends BasePage {
     private WebElement loginPasswordBox;
 
     @FindBy(css = "[data-qa='login-button']")
-    private WebElement loginButton;
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//div[1]/div/form/p")
+    private WebElement loginIncorrectMessage;
 
 
-    public String getNewUserSignupMessage() {
-        return newUserSignupMessageWebElement.getText();
+    public String getSignupTitle() {
+        return signupTitle.getText();
     }
 
     public void setSignupNewUserName(String name) {
@@ -39,11 +45,7 @@ public class LoginPage extends BasePage {
         signupNewUserEmailBox.sendKeys(email);
     }
 
-    public void clickSignupButtton() {
-        signupButton.click();
-    }
-
-    public void setLoginEmailAddress(String emailAddress) {
+    public void setLoginEmail(String emailAddress) {
         loginEmailAddressBox.sendKeys(emailAddress);
     }
 
@@ -51,7 +53,11 @@ public class LoginPage extends BasePage {
         loginPasswordBox.sendKeys(password);
     }
 
-    public void clickLoginButton() {
-        loginButton.click();
+    public String getLoginTitle() {
+        return LoginTitle.getText();
+    }
+
+    public String getLoginIncorrectMessage() {
+        return loginIncorrectMessage.getText();
     }
 }

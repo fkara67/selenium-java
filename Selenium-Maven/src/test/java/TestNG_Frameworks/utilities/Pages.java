@@ -8,7 +8,7 @@ public class Pages {
     private LoginPage loginPage;
     private SignupPage signupPage;
     private ProductsPage productsPage;
-    private AccountCreatedPage accountCreatedPage;
+    private TransitionPage transitionPage;
 
 
     public Pages() {
@@ -16,7 +16,7 @@ public class Pages {
         this.loginPage = new LoginPage();
         this.signupPage = new SignupPage();
         this.productsPage = new ProductsPage();
-        this.accountCreatedPage = new AccountCreatedPage();
+        this.transitionPage = new TransitionPage();
     }
 
     public HomePage getHomePage() {
@@ -35,7 +35,7 @@ public class Pages {
         return productsPage;
     }
 
-    public AccountCreatedPage getAccountCreatedPage() {
-        return accountCreatedPage;
+    public TransitionPage getTransitionPage() {
+        return transitionPage;
     }
 }

@@ -2,6 +2,7 @@ package TestNG_Frameworks.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -127,5 +128,10 @@ public class BrowserUtils {
 
     public static void implicitlyWait(int sec) {
         utilities.Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+    }
+
+    public static void scrollBy(int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
 }

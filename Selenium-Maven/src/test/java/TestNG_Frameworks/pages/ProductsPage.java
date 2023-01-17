@@ -10,7 +10,7 @@ public class ProductsPage extends BasePage{
     private WebElement searchProductBox;
 
     @FindBy(css = "[class='fa fa-search']")
-    private WebElement searchButton;
+    public WebElement searchButton;
 
     @FindBy(css = "[class='title text-center']")
     private WebElement searchedProductTitle;
@@ -21,11 +21,6 @@ public class ProductsPage extends BasePage{
 
     public void searchProduct(String productName) {
         searchProductBox.sendKeys(productName);
-    }
-
-
-    public void clickSearchButton() {
-        searchButton.click();
     }
 
     public String getSearchedProductTitle() {

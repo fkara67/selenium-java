@@ -10,10 +10,10 @@ public class SignupPage extends BasePage {
     private WebElement enterAccountInformationTitle;
 
     @FindBy(id = "id_gender1")
-    private WebElement genderMR;
+    public WebElement genderMen;
 
     @FindBy(id = "id_gender2")
-    private WebElement genderMRS;
+    public WebElement genderWomen;
 
     @FindBy(id = "password")
     private WebElement passwordBox;
@@ -28,10 +28,10 @@ public class SignupPage extends BasePage {
     private WebElement dateOfBirt_Years;
 
     @FindBy(xpath = "//div[1]/form/div[6]")
-    private WebElement signupForOurNewsletter_Checkbox;
+    public WebElement signupForOurNewsletter_Checkbox;
 
     @FindBy(xpath = "//div[1]/form/div[7]")
-    private WebElement receiveSpecialOffers_Checkbox;
+    public WebElement receiveSpecialOffers_Checkbox;
 
     @FindBy(id = "first_name")
     private WebElement firstNameBox;
@@ -71,13 +71,6 @@ public class SignupPage extends BasePage {
         return enterAccountInformationTitle.getText();
     }
 
-    public void selectTitleMen() {
-        genderMR.click();
-    }
-
-    public void selectTitleWomen() {
-        genderMRS.click();
-    }
 
     public void setPassword(String password) {
         passwordBox.sendKeys(password);
@@ -104,13 +97,6 @@ public class SignupPage extends BasePage {
         select.selectByVisibleText(year);
     }
 
-    public void selectSignupForOurNewsletter_Checkbox() {
-        signupForOurNewsletter_Checkbox.click();
-    }
-
-    public void selectReceiveSpecialOffers_Checkbox() {
-        receiveSpecialOffers_Checkbox.click();
-    }
 
     public void setFirstName(String firstName) {
         firstNameBox.sendKeys(firstName);
@@ -147,10 +133,6 @@ public class SignupPage extends BasePage {
 
     public void setMobileNumber(String mobileNumber) {
         mobileNumberBox.sendKeys(mobileNumber);
-    }
-
-    public void clickCreateAccountButton() {
-        createAccountButton.click();
     }
 
     public String getEmailAlreadyExistMessage() {

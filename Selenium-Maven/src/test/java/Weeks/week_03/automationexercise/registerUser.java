@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -18,7 +17,7 @@ import java.util.List;
 public class registerUser {
     WebDriver driver;
 
-    @BeforeSuite
+    @BeforeTest
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
