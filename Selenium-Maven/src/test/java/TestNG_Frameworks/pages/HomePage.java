@@ -1,26 +1,28 @@
 package TestNG_Frameworks.pages;
 
 import TestNG_Frameworks.utilities.BrowserUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
     @FindBy(css = "a[href='/login']")
-    private WebElement signupLoginButton;
+    public WebElement signupLoginButton;
 
     @FindBy(css = "a[href='/products']")
-    private WebElement productsButton;
+    protected WebElement productsButton;
 
     @FindBy(xpath = "//li[10]/a")
-    private WebElement loggedInAsUserName_WebElement;
+    protected WebElement loggedInAsUserName_WebElement;
 
     @FindBy(css = "[href='/delete_account']")
-    private WebElement deleteAccountButton;
+    protected WebElement deleteAccountButton;
 
 
 
+    public void click(WebElement element) {
+        element.click();
+    }
 
     public void clickSignupLoginButton() {
         signupLoginButton.click();

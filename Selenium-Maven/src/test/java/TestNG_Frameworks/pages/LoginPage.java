@@ -15,7 +15,7 @@ public class LoginPage extends BasePage {
     private WebElement signupNewUserEmailBox;
 
     @FindBy(css = "[data-qa='signup-button']")
-    private WebElement signupButton;
+    public WebElement signupButton;
 
     @FindBy(css = "[data-qa='login-email']")
     private WebElement loginEmailAddressBox;

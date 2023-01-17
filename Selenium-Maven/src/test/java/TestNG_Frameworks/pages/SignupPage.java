@@ -61,7 +61,7 @@ public class SignupPage extends BasePage {
     private WebElement mobileNumberBox;
 
     @FindBy(css = "[data-qa='create-account']")
-    private WebElement createAccountButton;
+    public WebElement createAccountButton;
 
     @FindBy(xpath = "//div[3]/div/form/p")
     private WebElement emailAlreadyExistMessage;
