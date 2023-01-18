@@ -30,13 +30,12 @@ public class ProductsPage extends BasePage{
     @FindBy(css = "[class='col-sm-7']")
     public WebElement productDetails;
 
-    public List<WebElement> desiredProductDetails;
 
-    private By nameInDetails = By.cssSelector("h2");
+    private final By nameInDetails = By.cssSelector("h2");
 
-    private By priceInDetails = By.cssSelector("span:first-child");
+    private final By priceInDetails = By.cssSelector("span:first-child");
 
-    private By otherDetails = By.cssSelector("p");
+    private final By otherDetails = By.cssSelector("p");
 
 
 

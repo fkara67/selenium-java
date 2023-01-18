@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
-import static TestNG_Frameworks.utilities.BrowserUtils.implicitlyWait;
+import static TestNG_Frameworks.utilities.BrowserUtils.*;
 
 public class BaseTest {
     SoftAssert softAssert = new SoftAssert();
