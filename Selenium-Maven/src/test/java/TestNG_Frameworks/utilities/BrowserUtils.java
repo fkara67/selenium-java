@@ -40,6 +40,7 @@ public class BrowserUtils {
      * Performs click action on an element
      */
     public static void click(WebElement element) {
+        waitForVisibility(element, 5);
         element.click();
     }
 
@@ -131,7 +132,19 @@ public class BrowserUtils {
     }
 
     public static void scrollBy(int x, int y) {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("window.scrollBy(" + x + "," + y + ")");
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("window.scrollBy(" + x + "," + y + ")");
+    }
+
+    public static long getPageOffset(String p) {
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        long offSet;
+        if (p.equals("x")) {
+            offSet = (Long) executor.executeScript("return window.pageXOffset;");
+        }
+        else
+            offSet = (Long) executor.executeScript("return window.pageYOffset;");
+
+        return offSet;
     }
 }

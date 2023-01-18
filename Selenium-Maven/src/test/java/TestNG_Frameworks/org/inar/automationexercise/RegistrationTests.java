@@ -1,6 +1,5 @@
 package TestNG_Frameworks.org.inar.automationexercise;
 
-import TestNG_Frameworks.utilities.BrowserUtils;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import static TestNG_Frameworks.utilities.BrowserUtils.*;
@@ -41,6 +40,7 @@ public class RegistrationTests extends BaseTest   {
         //  Select checkbox 'Sign up for our newsletter!'
         // Select checkbox 'Receive special offers from our partners!'
         scrollBy(0,900);
+
         click(signupPage.signupForOurNewsletter_Checkbox);
         click(signupPage.receiveSpecialOffers_Checkbox);
 
@@ -83,12 +83,11 @@ public class RegistrationTests extends BaseTest   {
         softAssert.assertEquals(actualAccountDeletedMessage, "ACCOUNT DELETED!",
                 "Test Case 1 - Verify that 'ACCOUNT DELETED!' is visible");
 
-        BrowserUtils.wait(3);
         click(transitionPage.continueButton);
     }
 
     @Test(priority = 1)
-    public void TestCase_2_RegisterUserWithExistingEmail() {
+    public void TestCase_5_RegisterUserWithExistingEmail() {
 
         // Click on 'Signup / Login' button
         click(homePage.signupLoginButton);
@@ -106,7 +105,7 @@ public class RegistrationTests extends BaseTest   {
         // Verify error 'Email Address already exist!' is visible
         String actualEmailAlreadyExistMessage = signupPage.getEmailAlreadyExistMessage();
         softAssert.assertEquals(actualEmailAlreadyExistMessage, "Email Address already exist!",
-                "Test Case 2 - Verify error 'Email Address already exist!' is visible");
+                "Test Case 5 - Verify error 'Email Address already exist!' is visible");
 
         softAssert.assertAll();
     }
