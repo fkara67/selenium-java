@@ -6,10 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -19,7 +16,7 @@ import java.util.stream.Collectors;
 public class LiveDemo2 {
     WebDriver driver;
 
-    @BeforeSuite
+    @BeforeClass
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -84,7 +81,7 @@ public class LiveDemo2 {
         Assert.assertEquals(veggies.size(), filteredList.size());
     }
 
-    @AfterSuite
+    @AfterClass
     public void afterTest() {
         // Perform cleanup tasks or generate test reports here
         driver.quit();

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test thread-count="4" name="automationexerciseTests">
+        <classes >
+
+            <class name="TestNG_Frameworks.automationexercise.RegistrationTests">
+                <methods >
+                    <include name="TestCase_1_Register_User"/>
+                    <include name="TestCase_5_RegisterUserWithExistingEmail"/>
+                </methods>
+            </class>
+
+            <class name="TestNG_Frameworks.automationexercise.ProductsTests">
+                <methods>
+                    <include name="TestCase_8_Verify_All_Products_and_product_detail_page"/>
+                    <include name="TestCase_9_Search_Product"/>
+                </methods>
+            </class>
+
+            <class name="TestNG_Frameworks.automationexercise.LoginTests">
+                <methods>
+                    <include name="TestCase_2_LoginWithCorrectInput"/>
+                    <include name="TestCase_3_LoginWithIncorrectInput"/>
+                    <include name="TestCase_4_LogoutUser"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

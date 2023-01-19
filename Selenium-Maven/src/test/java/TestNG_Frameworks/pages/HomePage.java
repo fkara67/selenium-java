@@ -3,7 +3,7 @@ package TestNG_Frameworks.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage {
+public class HomePage extends BasePage  {
 
     @FindBy(css = "a[href='/login']")
     public WebElement signupLoginButton;
@@ -24,7 +24,5 @@ public class HomePage extends BasePage {
     public String getLoggedInAsUserName_Text() {
         return loggedInAsUserName_WebElement.getText();
     }
-
-
 
 }

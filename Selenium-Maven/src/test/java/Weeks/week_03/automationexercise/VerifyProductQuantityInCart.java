@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,7 @@ public class VerifyProductQuantityInCart {
     WebDriver driver;
     String desiredQuantity = "4";
 
-    @BeforeTest
+    @BeforeClass
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();

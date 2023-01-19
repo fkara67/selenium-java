@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public class SearchProductTest {
     WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void setUpSuit() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();

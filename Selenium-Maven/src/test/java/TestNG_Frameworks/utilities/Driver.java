@@ -40,13 +40,13 @@ public class Driver {
                     driverPool.set(new ChromeDriver(chromeOptions));
                     System.out.println("----------------------------------------------------------------");
                     break;
-                case "chromeheadless":
+                /*case "chromeheadless":
                     //to run chrome without interface (headless mode)
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.setHeadless(true);
                     driverPool.set(new ChromeDriver(options));
-                    break;
+                    break;*/
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());

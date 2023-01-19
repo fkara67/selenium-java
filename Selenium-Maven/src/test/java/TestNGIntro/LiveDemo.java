@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
 public class LiveDemo {
     WebDriver driver;
 
-    @BeforeSuite
+    @BeforeClass
     public void setUpSuit() {
-        System.out.println("----------------------BeforeSuit-----------------------");
+        System.out.println("----------------------BeforeClass-----------------------");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -71,6 +71,6 @@ public class LiveDemo {
     public void afterTest() {
         // Perform cleanup tasks or generate test reports here
         driver.quit();
-        System.out.println("----------------------AfterSuit-----------------------");
+        System.out.println("----------------------AfterTest-----------------------");
     }
 }

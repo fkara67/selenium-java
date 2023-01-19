@@ -22,7 +22,7 @@ public class ProductsPage extends BasePage{
     private List<WebElement> searchedProducts;
 
     @FindBy(css = "[class='col-sm-4']")
-    private List<WebElement> productList;
+    public List<WebElement> productList;
 
 
     public By viewProductButtons =  By.cssSelector("[class='choose']");
@@ -30,6 +30,7 @@ public class ProductsPage extends BasePage{
     @FindBy(css = "[class='col-sm-7']")
     public WebElement productDetails;
 
+    public By name = By.xpath("//div[1]/div[1]/p");
 
     private final By nameInDetails = By.cssSelector("h2");
 
@@ -62,5 +63,12 @@ public class ProductsPage extends BasePage{
         desiredDetails.addAll(productDetails.findElements(otherDetails));
 
         return desiredDetails;
+    }
+
+    public long getTotalDesiredProductCount(String desiredProduct) {
+        long totalDesiredProducts = productList.stream().
+                filter(p -> p.findElement(name).getText().contains(desiredProduct)).count();
+
+        return totalDesiredProducts;
     }
 }

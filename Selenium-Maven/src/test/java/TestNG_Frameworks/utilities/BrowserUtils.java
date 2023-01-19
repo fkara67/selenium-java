@@ -40,7 +40,7 @@ public class BrowserUtils {
      * Performs click action on an element
      */
     public static void click(WebElement element) {
-        waitForVisibility(element, 5);
+        waitForClickability(element, 7);
         element.click();
     }
 

@@ -1,5 +1,6 @@
-package TestNG_Frameworks.org.inar.automationexercise;
+package TestNG_Frameworks.automationexercise;
 
+import TestNG_Frameworks.utilities.BrowserUtils;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import static TestNG_Frameworks.utilities.BrowserUtils.*;
@@ -7,16 +8,18 @@ import static TestNG_Frameworks.utilities.BrowserUtils.*;
 public class RegistrationTests extends BaseTest   {
 
     // We should use soft assertion because in this test case we have multiple cases to test
-    SoftAssert softAssert = new SoftAssert();
+
 
     @Test
     public void TestCase_1_Register_User() {
 
+        SoftAssert softAssert = new SoftAssert();
         String userName = "Ceren";
 
         // Click on 'Signup / Login' button
         click(homePage.signupLoginButton);
 
+        BrowserUtils.wait(3);
         String newUserSignUpMessage = loginPage.getSignupTitle();
         // Verify 'New User Signup!' is visible
         softAssert.assertEquals(newUserSignUpMessage, "New User Signup!",
@@ -33,7 +36,7 @@ public class RegistrationTests extends BaseTest   {
                 "Test Case 1 - Verify that 'ENTER ACCOUNT INFORMATION' is visible");
 
         // Fill details: Title, Name, Email, Password, Date of birth
-        click(signupPage.genderMen);
+        click(signupPage.genderWomen);
         signupPage.setPassword("123456");
         signupPage.setDateOfBirt("23","April","1999");
 
@@ -88,6 +91,7 @@ public class RegistrationTests extends BaseTest   {
 
     @Test(priority = 1)
     public void TestCase_5_RegisterUserWithExistingEmail() {
+        SoftAssert softAssert = new SoftAssert();
 
         // Click on 'Signup / Login' button
         click(homePage.signupLoginButton);
