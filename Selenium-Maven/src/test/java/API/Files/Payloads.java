@@ -46,4 +46,16 @@ public class Payloads {
                 "  ]\n" +
                 "}";
     }
+
+    public static String addBook(String isbn, String aisle) {
+        String payload = "{\n" +
+                "\n" +
+                "\"name\":\"Learn API Test Automation with Java\",\n" +
+                "\"isbn\":\"" + isbn + "\",\n" +
+                "\"aisle\":\"" + aisle + "\",\n" +
+                "\"author\":\"John Smith\"\n" +
+                "}";
+
+        return payload;
+    }
 }
