@@ -3,11 +3,9 @@ package API.HandlingDynamicJson;
 import API.Files.Payloads;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Iterator;
 
 import static io.restassured.RestAssured.*;
 
