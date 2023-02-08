@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
+  <test thread-count="5" verbose="0" name="C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven(failed)">
+    <classes>
+      <class name="Weeks.week_03.automationexercise.registerUser">
+        <methods>
+          <include name="verifyLoggedInAsUsernameIsVisible"/>
+          <include name="clickContinueButton"/>
+          <include name="enterNameEmailAndClickSignUp"/>
+          <include name="setUpTest"/>
+          <include name="verifyACCOUNTCREATEDIsVisible"/>
+          <include name="verifyACCOUNTDELETEDIsVisibleAndClickContinueButton"/>
+          <include name="afterTest"/>
+          <include name="setUpSuit"/>
+          <include name="clickDeleteAccountButton"/>
+          <include name="isHomePageVisisble"/>
+          <include name="fillDetails"/>
+          <include name="verifyENTERACCOUNTINFORMATIONIsVisible"/>
+          <include name="verifyNewUserSignupIsVisible"/>
+          <include name="clickSignUpLoginButton"/>
+        </methods>
+      </class> <!-- Weeks.week_03.automationexercise.registerUser -->
+      <class name="TestNGIntro.SimpleTest">
+        <methods>
+          <include name="streamMap"/>
+          <include name="streamFilter"/>
+          <include name="regular"/>
+          <include name="streamCollect"/>
+        </methods>
+      </class> <!-- TestNGIntro.SimpleTest -->
+      <class name="TestNGIntro.LiveDemo">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="sortAToZButtonTest"/>
+          <include name="afterTest"/>
+          <include name="setUpSuit"/>
+          <include name="GetProductPrice"/>
+        </methods>
+      </class> <!-- TestNGIntro.LiveDemo -->
+      <class name="TestNGIntro.LiveDemo2">
+        <methods>
+          <include name="sortProductsWithNameTest"/>
+          <include name="afterTest"/>
+          <include name="setUpSuit"/>
+          <include name="setUpTest"/>
+          <include name="getProductPrice"/>
+          <include name="filterBoxTest"/>
+        </methods>
+      </class> <!-- TestNGIntro.LiveDemo2 -->
+    </classes>
+  </test> <!-- C:/Users/fkara/Desktop/workspace1/selenium-java/selenium-java/Selenium-Maven(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
